@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var Rectangle = function (width, height) {
+    //tinh dien tich
+    this.getArea = function () {
+      return width * height;
+    };
+
+    //tinh chu vi
+    this.getPerimeter = function () {
+      return 2 * (width + height);
+    };
+
+    //hiển thị trực quan hình chữ nhật dưới dạng
+    this.display = function () {
+      for (var i = 1; i <= width; i++) {
+        for (var j = 1; j <= height; j++) {
+          document.write('#');
+        }
+        document.write("<br>");
+      }
+    }
+  };
+
+  function main() {
+    var rec1 = new Rectangle(6, 5);
+    var pre = rec1.getPerimeter();
+    var are = rec1.getArea();
+    var dis = rec1.display();
+    alert("area"+are+"; Perimeter"+pre);
+
+  }
+
+  main();
+</script>
+</body>
+</html>
